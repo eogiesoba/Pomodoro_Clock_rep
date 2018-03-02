@@ -1,0 +1,86 @@
+@import url('https://fonts.googleapis.com/css?family=Baloo');
+
+body {
+  background-color: #1C2833;
+  color:white;
+  font-family: 'Baloo', cursive;
+  font-size: 15px;
+}
+h3 {
+  font-size: 60px;
+}
+.big-circle {
+  width: 600px;
+  height: 600px;
+  border: 3px solid #38B0DE;
+  border-radius: 50%;
+  margin: auto;
+}
+.col-3,.col-6,.col {
+  margin: auto;
+}
+.space {
+  cursor:pointer;
+}
+.set-timer{
+  font-size:30px;
+}
+.mini-circle{
+  height:300px;
+  border: 3px solid #38B0DE;
+  border-radius:50%;
+}
+.clock{
+  font-size:55px;
+  margin: 0px auto 35%;
+}
+.session{
+  font-size:35px;
+  margin: 35% auto 0px;
+}
+.barOverflow1 {
+  position: absolute;
+  top: -130px;
+  left: 65px;
+  overflow: hidden;
+  width: 470px;
+  height: 233px;
+  margin-bottom: -42px;
+  z-index:-1;
+}
+.bar1 {
+  position: absolute;
+  top: 50px;
+  left: 0;
+  width: 470px;
+  height: 470px;
+  border-radius: 50%;
+  border: 10px solid white;
+  border-bottom-color: #137bf2;
+  border-right-color: #137bf2;
+  transform: rotate(45deg);
+  z-index:-1;
+}
+.barOverflow2 {
+  position: absolute;
+  top: -110px;
+  left: 63px;
+  overflow: hidden;
+  width: 470px;
+  height: 240px;
+  margin: 300px auto 20px;
+  z-index:-1;
+}
+.bar2 {
+  position: absolute;
+  bottom: 50px;
+  left: 0;
+  width: 470px;
+  height: 470px;
+  border-radius: 50%;
+  border: 10px solid #E74C3C;
+  border-bottom-color: white;
+  border-right-color: white;
+  transform: rotate(45deg);
+  z-index:-1;
+}
