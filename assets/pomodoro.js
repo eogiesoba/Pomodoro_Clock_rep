@@ -15,6 +15,7 @@ var bt_status = "off";
 var delta;
 var start;
 var end;
+var alarmSound = new Audio("assets/sounds/alarmBell.mp3");
 
 $(document).ready( function(){
 
@@ -42,6 +43,7 @@ $(document).ready( function(){
       bL_Disp -= 1;
       b_update = "on";
       $("#bL_Disp").text(bL_Disp);
+      $("#S_Disp").text(bL_Disp);
     }
   });
 
@@ -50,6 +52,7 @@ $(document).ready( function(){
       bL_Disp += 1;
       b_update = "on";
       $("#bL_Disp").text(bL_Disp);
+      $("#S_Disp").text(bL_Disp);
     }
   });
 
@@ -59,12 +62,10 @@ $(document).ready( function(){
     if (power == "off"){
       power = "on";
       Timer();
-
     }
     else{
       power = "off";
       clearInterval(t);//Pauses the countdown interval     
-
     }
   });
 
@@ -120,11 +121,15 @@ function subtract() {
     clearInterval(t);
     st_status = "off";
     breakTimer();
+    alarmSound.load();
+    alarmSound.play();
   }
   else if (hr == 0 && mn == 0 && sec == 0 && bt_status == "on") {
     clearInterval(t);
     bt_status = "off";
     sessionTimer();
+    alarmSound.load();
+    alarmSound.play();
   }
   else{
     sec--;
@@ -181,13 +186,12 @@ function subtract() {
         duration: time,
         step: function(deg) {
           bar.css({
-            transform: "rotate(" + (56 + (deg * 1.57)) + "deg)"
+            transform: "rotate(" + (56 + (deg * 1.59)) + "deg)"
           });
         }
       });
       start += delta;
       end += delta;
-
     });
   };
 

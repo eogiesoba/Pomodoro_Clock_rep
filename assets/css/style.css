@@ -84,3 +84,23 @@ h3 {
   transform: rotate(45deg);
   z-index:-1;
 }
+
+.v-center{
+  max-width:100%;
+  max-height:100%;
+  overflow:auto;
+ 
+  height:730px;
+  width:800px;
+ 
+  position:absolute;
+  margin:auto;
+  
+  /*Vertical Alignment */
+  top:0;
+  bottom:0; 
+ 
+  /*Horizontal Alignment */
+  right:0;
+  left:0;
+ }
